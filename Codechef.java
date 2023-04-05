@@ -10,23 +10,30 @@ class Codechef
 	public static void main (String[] args) throws java.lang.Exception
 	{
 		// your code goes here
-		Scanner scan=new Scanner(System.in);
-		int t=scan.nextInt();
+		Scanner scan = new Scanner(System.in);
+		int t = scan.nextInt();
 		for(int i=0;i<t;i++)
 		{
-		    int n=scan.nextInt();
 		    int x=scan.nextInt();
-		    int z[]=new int[n];
+		    int y=scan.nextInt();
+		    int z=y-x;
 		    int count=0;
-		    for(int j=1;j<n;j++)
+		     for(int j=y;j<x;j++)
 		    {
-		        z[j]=j;
-		        if(z[j]>x)
+		        
+		        count++;
+		        z=y+count*(count+1)/2;
+		        
+		        if(z>=x)
 		        {
-		           count++;
+		            break;
 		        }
+		       
+		       
 		    }
-		    System.out.println(count);
-		}
+		      System.out.println(count);   
+		 
+		    
+		} 
 	}
 }
